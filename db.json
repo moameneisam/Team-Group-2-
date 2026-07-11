@@ -1,0 +1,556 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "name": "Demo User",
+      "email": "demo@aisprint.com",
+      "password": "demo123",
+      "avatar": "",
+      "createdAt": "2026-01-01T00:00:00.000Z"
+    },
+    {
+      "name": "moamen",
+      "email": "moameneisam@gmail.com",
+      "password": "12345678",
+      "avatar": "",
+      "createdAt": "2026-07-11T13:19:05.768Z",
+      "id": 2
+    },
+    {
+      "name": "Moámen Eisam",
+      "email": "moamenisam1@gmail.com",
+      "password": "AXnb95htmFmGcGJ",
+      "avatar": "",
+      "createdAt": "2026-07-11T14:23:13.748Z",
+      "id": 3
+    }
+  ],
+  "projects": [
+    {
+      "id": 1,
+      "title": "Telegram Automation System",
+      "goal": "automation system for telegram",
+      "summary": "This project aims to develop a robust automation system for Telegram, enabling users to define and execute custom actions based on specific triggers. The system will feature a user-friendly interface for rule management, secure data storage, and reliable background processing to automate various Telegram interactions.",
+      "plan": {
+        "title": "Telegram Automation System",
+        "summary": "This project aims to develop a robust automation system for Telegram, enabling users to define and execute custom actions based on specific triggers. The system will feature a user-friendly interface for rule management, secure data storage, and reliable background processing to automate various Telegram interactions.",
+        "roadmap": [
+          {
+            "phase": "Phase 1: Foundation & Core Bot",
+            "duration": "2 weeks",
+            "description": "Establish the project environment, implement basic Telegram bot functionality, set up user authentication, and design the initial database schema for storing users and automation rules."
+          },
+          {
+            "phase": "Phase 2: Automation Engine & Rule Management",
+            "duration": "4 weeks",
+            "description": "Develop the core automation logic, including abstracting triggers and actions. Implement mechanisms for users to define, store, and manage their automation rules through the bot interface. Integrate background processing for rule execution."
+          },
+          {
+            "phase": "Phase 3: Advanced Features & Deployment",
+            "duration": "3 weeks",
+            "description": "Enhance the system with more complex triggers and actions, robust error handling, comprehensive logging, and thorough testing. Prepare the application for production deployment, including containerization and cloud infrastructure setup."
+          }
+        ],
+        "milestones": [
+          {
+            "title": "Basic Bot Operational",
+            "target": "End of Week 2",
+            "criteria": "The Telegram bot successfully responds to `/start` and `/help` commands, user registration/login is functional, and the core database schema is defined and implemented."
+          },
+          {
+            "title": "First Automation Rule Executed",
+            "target": "End of Week 5",
+            "criteria": "A user can define a simple automation rule (e.g., 'if message contains X, reply with Y'), and the system successfully detects the trigger and executes the corresponding action."
+          },
+          {
+            "title": "Rule Management UI Complete",
+            "target": "End of Week 7",
+            "criteria": "Users can fully manage their automation rules (list, create, edit, delete) using intuitive bot commands or an inline keyboard interface."
+          },
+          {
+            "title": "Production Deployment Ready",
+            "target": "End of Week 9",
+            "criteria": "The application is containerized with Docker, deployed to a cloud environment (e.g., Heroku/AWS), and includes basic monitoring and logging for stability."
+          }
+        ],
+        "weeklyPlan": [
+          {
+            "week": 1,
+            "focus": "Project Setup & Basic Bot Core",
+            "tasks": [
+              "Initialize Git repository and set up Python virtual environment.",
+              "Register a new Telegram bot via BotFather and obtain API token.",
+              "Implement basic bot commands (`/start`, `/help`) using `python-telegram-bot`.",
+              "Configure basic logging and error handling for the bot.",
+              "Define initial project structure and add a `requirements.txt`."
+            ]
+          },
+          {
+            "week": 2,
+            "focus": "Database & User Management Foundation",
+            "tasks": [
+              "Design the database schema for Users, Rules, Triggers, and Actions.",
+              "Integrate an ORM (e.g., SQLAlchemy) with SQLite for initial development.",
+              "Implement user registration and authentication flow via bot commands.",
+              "Develop functions for storing and retrieving user data from the database."
+            ]
+          },
+          {
+            "week": 3,
+            "focus": "Core Automation Engine Design",
+            "tasks": [
+              "Define abstract classes or interfaces for Triggers and Actions.",
+              "Implement the main event listener to process incoming Telegram updates.",
+              "Develop the core logic to match incoming updates against defined triggers.",
+              "Begin implementing a simple concrete trigger (e.g., `on_text_match`)."
+            ]
+          },
+          {
+            "week": 4,
+            "focus": "First Automation Rule & Persistence",
+            "tasks": [
+              "Implement a simple concrete action (e.g., `send_message_reply`).",
+              "Develop functionality to save and load user-defined rules to/from the database.",
+              "Integrate the rule execution engine with the event listener.",
+              "Test the full lifecycle of a basic automation rule: define, save, trigger, execute."
+            ]
+          }
+        ],
+        "resources": [
+          {
+            "name": "Telegram Bot API Documentation",
+            "type": "documentation",
+            "url": "https://core.telegram.org/bots/api",
+            "description": "The official reference for all Telegram bot capabilities and API methods."
+          },
+          {
+            "name": "python-telegram-bot library",
+            "type": "library",
+            "url": "https://python-telegram-bot.org/",
+            "description": "A popular, feature-rich Python wrapper for the Telegram Bot API, simplifying bot development."
+          },
+          {
+            "name": "SQLAlchemy ORM Documentation",
+            "type": "library",
+            "url": "https://docs.sqlalchemy.org/",
+            "description": "A powerful SQL toolkit and Object Relational Mapper for Python, crucial for database interaction."
+          },
+          {
+            "name": "Docker Documentation",
+            "type": "tool",
+            "url": "https://docs.docker.com/",
+            "description": "Essential for containerizing the application, ensuring consistent environments and simplified deployment."
+          },
+          {
+            "name": "Heroku Dev Center / AWS Free Tier Docs",
+            "type": "documentation",
+            "url": "https://devcenter.heroku.com/categories/reference | https://aws.amazon.com/free/",
+            "description": "Guides for deploying Python applications to a cloud platform, useful for production hosting."
+          },
+          {
+            "name": "APScheduler (Advanced Python Scheduler)",
+            "type": "library",
+            "url": "https://apscheduler.readthedocs.io/",
+            "description": "Useful for implementing time-based triggers or scheduled tasks within the automation system."
+          },
+          {
+            "name": "Redis Documentation",
+            "type": "tool",
+            "url": "https://redis.io/docs/",
+            "description": "A fast in-memory data store, useful for caching, rate-limiting, or managing task queues for scalability."
+          }
+        ],
+        "projectStructure": {
+          "description": "The system will follow a modular, event-driven architecture. Bot interactions are handled separately from the core automation logic and data persistence. Incoming Telegram updates drive the system, which then matches them against user-defined rules to execute actions.",
+          "folders": [
+            {
+              "path": "src/",
+              "purpose": "Contains all primary source code for the application."
+            },
+            {
+              "path": "src/bot/",
+              "purpose": "Handles Telegram bot update processing, command routing, and user interaction logic."
+            },
+            {
+              "path": "src/core/",
+              "purpose": "Implements the main automation engine, including trigger detection, action execution, and rule processing."
+            },
+            {
+              "path": "src/database/",
+              "purpose": "Manages database connection, ORM setup, and migration scripts."
+            },
+            {
+              "path": "src/models/",
+              "purpose": "Defines database models for users, rules, triggers, actions, and other entities."
+            },
+            {
+              "path": "src/config/",
+              "purpose": "Stores configuration files, environment variable loading, and settings."
+            },
+            {
+              "path": "src/utils/",
+              "purpose": "Contains common utility functions, helpers, and shared modules."
+            },
+            {
+              "path": "tests/",
+              "purpose": "Houses unit, integration, and end-to-end tests for the application components."
+            },
+            {
+              "path": "docs/",
+              "purpose": "Project documentation, API specifications, and user guides."
+            },
+            {
+              "path": "docker/",
+              "purpose": "Contains Dockerfile and related containerization configurations for deployment."
+            }
+          ],
+          "techStack": [
+            "Python",
+            "python-telegram-bot",
+            "SQLAlchemy",
+            "SQLite (for development)",
+            "PostgreSQL (for production)",
+            "Docker",
+            "Redis (optional)"
+          ]
+        }
+      },
+      "messages": [
+        {
+          "role": "assistant",
+          "content": "I've created a complete plan for \"Telegram Automation System\". Ask me anything about the roadmap, milestones, or next steps!"
+        },
+        {
+          "role": "user",
+          "content": "Phase 1  تقدر تقسمها لاتنين ؟؟"
+        },
+        {
+          "role": "assistant",
+          "content": "أكيد! ممكن نقسم \"المرحلة الأولى\" (Phase 1) لمرحلتين فرعيتين عشان تكون أكثر تنظيمًا وسهولة في التنفيذ:\n\n---\n\n**المرحلة 1.1: التخطيط والإعداد الأساسي (Planning & Basic Setup)**\n\n*   **تحديد الأهداف الأولية:** ما هي أول وظيفة بسيطة تريد أن يؤديها البوت؟ (مثال: الرد على رسالة معينة، إرسال رسالة ترحيب).\n*   **اختيار التقنية الأساسية:** تحديد لغة البرمجة (مثل Python أو Node.js) والمكتبة المناسبة للتعامل مع Telegram API (مثل `python-telegram-bot` لـ Python أو `telegraf.js` لـ Node.js).\n*   **إعداد بيئة التطوير:** تثبيت الأدوات اللازمة (IDE، بيئة افتراضية).\n*   **الحصول على Telegram Bot Token:** إنشاء البوت الخاص بك من BotFather والحصول على الرمز المميز.\n\n---\n\n**المرحلة 1.2: الاتصال الأساسي والتفاعل الأول (Core Connection & First Interaction)**\n\n*   **كتابة الكود للاتصال بـ Telegram API:** استخدام المكتبة المختارة لإنشاء اتصال أساسي مع بوتك.\n*   **تنفيذ أمر بسيط (مثل `/start`):** جعل البوت يستجيب لأول أمر يتلقاه.\n*   **إرسال رسالة \"أهلاً وسهلاً\":** برمجة البوت لإرسال رسالة ترحيب بسيطة.\n*   **استقبال رسالة نصية بسيطة:** التأكد من أن البوت يمكنه استقبال الرسائل من المستخدمين.\n\n---\n\nهذا التقسيم بيخليك تركز على خطوة بخطوة، وبتبني أساس قوي قبل ما تنتقل للميزات الأكثر تعقيدًا. ايه رأيك؟"
+        }
+      ],
+      "isFavorite": false,
+      "userId": 2,
+      "createdAt": "2026-07-11T13:35:50.595Z",
+      "updatedAt": "2026-07-11T13:36:53.234Z"
+    },
+    {
+      "id": 2,
+      "title": "Personal Portfolio Website",
+      "goal": "build protofolio",
+      "summary": "A modern, fast, and SEO-optimized personal portfolio website designed to showcase projects, blog posts, and contact information. Built with Next.js, Tailwind CSS, and a PostgreSQL database for dynamic content management.",
+      "plan": {
+        "title": "Personal Portfolio Website",
+        "summary": "A modern, fast, and SEO-optimized personal portfolio website designed to showcase projects, blog posts, and contact information. Built with Next.js, Tailwind CSS, and a PostgreSQL database for dynamic content management.",
+        "roadmap": [
+          {
+            "name": "Design & Setup",
+            "description": "Initialize the project repository, configure the development environment, and design the UI/UX wireframes.",
+            "duration": "1 week",
+            "order": 1
+          },
+          {
+            "name": "Core Development",
+            "description": "Build the core frontend components, static pages, and implement responsive styling.",
+            "duration": "1 week",
+            "order": 2
+          },
+          {
+            "name": "Database & CMS Integration",
+            "description": "Set up the database, configure Prisma ORM, and build API routes for dynamic content.",
+            "duration": "4 days",
+            "order": 3
+          },
+          {
+            "name": "Deployment & Optimization",
+            "description": "Optimize performance, configure SEO metadata, and deploy the live site.",
+            "duration": "3 days",
+            "order": 4
+          }
+        ],
+        "tasks": [
+          {
+            "phase": "Design & Setup",
+            "items": [
+              {
+                "id": "task-1783783988193-ioh8kj2-0",
+                "title": "Project Initialization",
+                "description": "Set up Next.js with TypeScript, Tailwind CSS, and ESLint.",
+                "status": "todo"
+              },
+              {
+                "id": "task-1783783988193-xu18lab-1",
+                "title": "UI/UX Wireframing",
+                "description": "Design the layout for Home, Projects, and Contact pages.",
+                "status": "todo"
+              }
+            ]
+          },
+          {
+            "phase": "Core Development",
+            "items": [
+              {
+                "id": "task-1783783988193-cikqk7c-0",
+                "title": "Component Development",
+                "description": "Build reusable UI components like Navbar, Footer, ProjectCard, and Button.",
+                "status": "todo"
+              },
+              {
+                "id": "task-1783783988193-6vtzvud-1",
+                "title": "Page Implementation",
+                "description": "Create static pages for Home, About, and Projects list.",
+                "status": "todo"
+              }
+            ]
+          },
+          {
+            "phase": "Database & CMS Integration",
+            "items": [
+              {
+                "id": "task-1783783988193-rp5a4i1-0",
+                "title": "Database Setup",
+                "description": "Configure PostgreSQL database schema using Prisma ORM.",
+                "status": "todo"
+              },
+              {
+                "id": "task-1783783988193-hj3kon7-1",
+                "title": "API Route Creation",
+                "description": "Develop backend API endpoints to fetch projects and handle contact form submissions.",
+                "status": "todo"
+              }
+            ]
+          },
+          {
+            "phase": "Deployment & Optimization",
+            "items": [
+              {
+                "id": "task-1783783988193-y0p3rql-0",
+                "title": "SEO & Performance Optimization",
+                "description": "Configure metadata, open graph tags, and optimize image loading.",
+                "status": "todo"
+              },
+              {
+                "id": "task-1783783988193-mgggo0z-1",
+                "title": "Deployment & Domain Configuration",
+                "description": "Deploy the application to Vercel and link a custom domain.",
+                "status": "todo"
+              }
+            ]
+          }
+        ],
+        "database": {
+          "description": "PostgreSQL database managed via Prisma ORM to store dynamic portfolio content and contact inquiries.",
+          "tables": [
+            {
+              "name": "projects",
+              "fields": [
+                {
+                  "name": "id",
+                  "type": "UUID",
+                  "description": "Unique identifier for each project"
+                },
+                {
+                  "name": "title",
+                  "type": "VARCHAR",
+                  "description": "Title of the project"
+                },
+                {
+                  "name": "description",
+                  "type": "TEXT",
+                  "description": "Detailed description of the project"
+                },
+                {
+                  "name": "tech_stack",
+                  "type": "VARCHAR[]",
+                  "description": "Array of technologies used"
+                },
+                {
+                  "name": "github_url",
+                  "type": "VARCHAR",
+                  "description": "Link to the source code repository"
+                },
+                {
+                  "name": "live_url",
+                  "type": "VARCHAR",
+                  "description": "Link to the live deployment"
+                }
+              ],
+              "description": "Stores information about showcased projects."
+            },
+            {
+              "name": "inquiries",
+              "fields": [
+                {
+                  "name": "id",
+                  "type": "UUID",
+                  "description": "Unique identifier for each inquiry"
+                },
+                {
+                  "name": "name",
+                  "type": "VARCHAR",
+                  "description": "Name of the sender"
+                },
+                {
+                  "name": "email",
+                  "type": "VARCHAR",
+                  "description": "Email address of the sender"
+                },
+                {
+                  "name": "message",
+                  "type": "TEXT",
+                  "description": "Message content"
+                },
+                {
+                  "name": "created_at",
+                  "type": "TIMESTAMP",
+                  "description": "Timestamp of submission"
+                }
+              ],
+              "description": "Stores contact form submissions from visitors."
+            },
+            {
+              "name": "posts",
+              "fields": [
+                {
+                  "name": "id",
+                  "type": "UUID",
+                  "description": "Unique identifier for each blog post"
+                },
+                {
+                  "name": "title",
+                  "type": "VARCHAR",
+                  "description": "Title of the post"
+                },
+                {
+                  "name": "slug",
+                  "type": "VARCHAR",
+                  "description": "URL-friendly identifier"
+                },
+                {
+                  "name": "content",
+                  "type": "TEXT",
+                  "description": "Markdown content of the post"
+                },
+                {
+                  "name": "published",
+                  "type": "BOOLEAN",
+                  "description": "Publishing status"
+                }
+              ],
+              "description": "Stores blog posts for the portfolio site."
+            }
+          ]
+        },
+        "apis": [
+          {
+            "method": "GET",
+            "path": "/api/projects",
+            "description": "Retrieve all portfolio projects"
+          },
+          {
+            "method": "POST",
+            "path": "/api/projects",
+            "description": "Create a new project (admin only)"
+          },
+          {
+            "method": "POST",
+            "path": "/api/contact",
+            "description": "Submit a contact form inquiry"
+          },
+          {
+            "method": "GET",
+            "path": "/api/posts",
+            "description": "Retrieve all published blog posts"
+          },
+          {
+            "method": "GET",
+            "path": "/api/posts/[slug]",
+            "description": "Retrieve a specific blog post by slug"
+          }
+        ],
+        "folderStructure": {
+          "description": "Standard Next.js App Router structure optimized for scalability and clean separation of concerns.",
+          "folders": [
+            {
+              "path": "src/app",
+              "purpose": "Contains pages, layouts, and API routes (App Router)."
+            },
+            {
+              "path": "src/components",
+              "purpose": "Reusable UI components (buttons, cards, navigation)."
+            },
+            {
+              "path": "src/lib",
+              "purpose": "Utility functions, database clients (Prisma), and third-party integrations."
+            },
+            {
+              "path": "src/styles",
+              "purpose": "Global stylesheets and Tailwind CSS configurations."
+            },
+            {
+              "path": "src/types",
+              "purpose": "TypeScript type definitions and interfaces."
+            },
+            {
+              "path": "public",
+              "purpose": "Static assets such as images, icons, and fonts."
+            }
+          ]
+        },
+        "deployment": {
+          "platform": "Vercel",
+          "steps": [
+            "Push the codebase to a GitHub repository.",
+            "Import the repository into the Vercel Dashboard.",
+            "Configure environment variables (DATABASE_URL, etc.).",
+            "Click Deploy to initiate the build and deployment process.",
+            "Configure custom domain settings in Vercel."
+          ],
+          "description": "Serverless deployment platform optimized for Next.js applications, offering automatic SSL, global CDN, and preview deployments."
+        },
+        "bestPractices": [
+          {
+            "title": "Responsive Design",
+            "description": "Ensure the UI is fully responsive across mobile, tablet, and desktop screens."
+          },
+          {
+            "title": "Semantic HTML",
+            "description": "Use proper semantic elements to improve accessibility and SEO."
+          },
+          {
+            "title": "Image Optimization",
+            "description": "Utilize Next.js Image component for automatic format and size optimization."
+          },
+          {
+            "title": "Environment Variables",
+            "description": "Secure sensitive credentials like database URLs using environment variables."
+          },
+          {
+            "title": "Component Reusability",
+            "description": "Keep components modular and reusable to maintain a clean codebase."
+          },
+          {
+            "title": "Type Safety",
+            "description": "Leverage TypeScript strictly to prevent runtime errors and improve developer experience."
+          }
+        ],
+        "estimatedDuration": "3 weeks",
+        "techStack": [
+          "Next.js",
+          "React",
+          "TypeScript",
+          "Tailwind CSS",
+          "PostgreSQL",
+          "Prisma",
+          "Vercel"
+        ]
+      },
+      "taskStatuses": {},
+      "isFavorite": false,
+      "userId": 1,
+      "createdAt": "2026-07-11T15:34:35.431Z",
+      "updatedAt": "2026-07-11T15:34:35.431Z"
+    }
+  ],
+  "passwordResets": []
+}
